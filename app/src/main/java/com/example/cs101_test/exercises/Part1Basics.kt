@@ -52,8 +52,8 @@ object Part1Basics {
     // ---------------------- EXERCISE 8
     // Create a function to find the maximum value in a list.
     fun findMax(numbers: List<Int>): Int {
-        return numbers.maxOrNull()!! // Har ikke kunne få denne opg til at virke. Men fandt dette
-        // via ChatGPT.
+        return numbers.maxOrNull()!! // Har ikke kunne få denne opg til at virke. Så prøvede ChatGPT
+                                     // Men det virker stadig ikke
     }
 
     // ---------------------- EXERCISE 9
