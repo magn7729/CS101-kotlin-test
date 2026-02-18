@@ -16,7 +16,17 @@ object Part3ClassesAndObjects {
     // ---------------------- EXERCISE 1
     // Create a Book class with 3 attributes: title, author, and price (Double)
     // Add a method to display book details called displayDetails that prints title, author and price
-
+    class Book(
+        val title: String,
+        val author: String,
+        var price: Double
+    ){
+        fun displayDetails(){
+            println("Title: $title")
+            println("author: $author")
+            println("price: $price")
+        }
+    }
 
     // ---------------------- EXERCISE 2
     // Create a Student class with the attributes name, age, and grades (a list of integers)
@@ -24,6 +34,30 @@ object Part3ClassesAndObjects {
     // Add methods to add a grade (addGrade), calculate the average grade (averageGrade as Double),
     // and display student details (displayDetails) which must print name, age and average grade
 
+    class Student(
+        val name: String,
+        var age: Int
+    ) {
+        private val grades = mutableListOf<Int>()
+
+        fun addGrade(grade: Int){
+            grades.add(grade)
+        }
+        fun averageGrade(): Double {
+            return if (grades.isEmpty()){
+                0.0
+            } else {
+                grades.average()
+            }
+        }
+        fun displayDetails(){
+            println("Name: $name")
+            println("Age: $age")
+            println("Average grade: ${averageGrade()}")
+        }
+    }
+
+    // Har fået hjælp af ChatGPT til strukturen
 
     // ---------------------- EXERCISE 3
     // Create a BankAccount class with the attributes accountNumber, balance (Double), and accountHolder
